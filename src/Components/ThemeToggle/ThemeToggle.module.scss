@@ -1,0 +1,48 @@
+@import '../../Colors';
+.themeInput {
+  display: none;
+}
+.theme {
+  cursor: pointer;
+  position: relative;
+  border-radius: 50px;
+  display: block;
+  width: 70px;
+  height: 36px;
+  background: #f8fafc;
+  transition: 0.3s ease;
+  box-shadow: 0px 2px 4px 0px rgba(105, 105, 105, 0.25);
+  &::after {
+    transition: 0.3s ease;
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: $YELLOW;
+  }
+}
+.dark {
+  cursor: pointer;
+  position: relative;
+  border-radius: 50px;
+  display: block;
+  width: 70px;
+  height: 36px;
+  background: $DARK;
+  transition: 0.3s ease;
+  box-shadow: 0px 2px 4px 0px rgba(105, 105, 105, 0.25);
+  &::after {
+    transition: 0.3s ease;
+    position: absolute;
+    top: 3px;
+    left: 36px;
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: $WHITE;
+  }
+}

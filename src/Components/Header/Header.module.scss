@@ -1,0 +1,31 @@
+@import '../../Colors';
+.container {
+  display: flex;
+  width: 100%;
+  color: $DARK;
+}
+
+.leftside {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 50%;
+}
+.rightside {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+  width: 50%;
+}
+.time {
+  font-weight: normal;
+}
+.darkmode {
+  transition: 0.5s ease;
+  color: $WHITE;
+  svg path {
+    stroke: $WHITE;
+  }
+}

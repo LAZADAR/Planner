@@ -1,0 +1,16 @@
+@import '../../../../Colors';
+.ToDoInput {
+  background-color: $WHITE;
+  transition: 0.5s ease;
+  border: none;
+
+  outline: $Accent-Bule;
+  width: 50%;
+  height: 35px;
+  padding: 0 10px;
+  &:focus {
+    &::placeholder {
+      color: $Accent-Bule;
+    }
+  }
+}

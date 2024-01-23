@@ -1,0 +1,154 @@
+@import '../../../Colors';
+.Todo {
+  user-select: none;
+  transition: 0.5s ease;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  box-sizing: border-box;
+  padding: 1.5rem;
+  width: 80%;
+  min-height: fit-content;
+  flex-wrap: nowrap;
+  background-color: $WHITE;
+  border-radius: 20px;
+  box-shadow: 0px 2px 4px 0px rgba(105, 105, 105, 0.25);
+
+  .top {
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    margin: 0px;
+    height: 30px;
+    .right {
+      height: 100%;
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 100px;
+      justify-self: end;
+    }
+  }
+  svg path {
+    fill: transparent;
+    stroke: $DARK;
+  }
+  .bottom {
+    width: 100%;
+    height: fit-content;
+  }
+
+  .note {
+    transition: 0.5s ease;
+    word-wrap: break-word;
+    margin-left: 60px;
+    background-color: $Transperent-Bule;
+    width: 65%;
+    min-height: 60px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 10px;
+    color: $Accent-Bule;
+  }
+
+  .time {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: $Second-Text;
+    font-size: 20px;
+    font-weight: 800;
+    position: relative;
+    min-width: 60px;
+    height: 25px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0px;
+      width: 2px;
+      height: 25px;
+      background-color: $DARK;
+    }
+  }
+
+  .title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: fit-content;
+    color: $DARK;
+  }
+
+  &.darkmode {
+    transition: 0.5s ease;
+    button {
+      &:hover {
+        path {
+          fill: transparent;
+          stroke: $Accent-Bule;
+        }
+      }
+    }
+    svg path {
+      fill: transparent;
+      stroke: $WHITE;
+    }
+    p {
+      color: $WHITE;
+    }
+
+    .note {
+      color: $Accent-Bule;
+    }
+
+    .time {
+      color: $Second-Text;
+
+      &::after {
+        background-color: $WHITE;
+      }
+    }
+
+    background-color: $DARK;
+  }
+
+  &.completed {
+    .time {
+      color: $GREEN;
+      &::after {
+        background-color: $GREEN;
+      }
+    }
+
+    background-color: $TransperentDARK;
+
+    p {
+      color: $GREEN;
+    }
+
+    .note {
+      color: $GREEN;
+      background-color: $TransperentGREEN;
+    }
+  }
+}
+@media screen and (max-width: 1350px) {
+  .Todo {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .Todo {
+    width: 100%;
+    .title {
+      max-width: 200px;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@import '../../../Colors';
+.hello {
+  top: 0px;
+  position: absolute;
+  display: flex;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  .content {
+    color: $WHITE;
+
+    button {
+      transition: 0.5s ease;
+      &:hover {
+        transition: 0.5s ease;
+        color: $WHITE;
+      }
+      cursor: pointer;
+      font-weight: bolder;
+      background-color: $Accent-Bule;
+      color: $DARK;
+      outline: none;
+      border: none;
+      border-radius: 10px;
+      width: 120px;
+      height: 50px;
+    }
+    h3 {
+      text-align: justify;
+      width: 80%;
+      font-size: 17px;
+    }
+    .strong {
+      font-weight: bolder;
+      color: $Accent-Bule;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    padding: 20px;
+    border-radius: 50px;
+    margin: auto;
+    width: 60%;
+    height: 80%;
+    background-color: $TransperentDARK;
+    backdrop-filter: blur(20px);
+  }
+}

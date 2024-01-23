@@ -1,0 +1,45 @@
+@import '../../../Colors';
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  padding-top: 85px;
+  gap: 20px;
+  .title {
+    top: 25px;
+    display: flex;
+    align-items: center;
+
+    position: absolute;
+    width: 70%;
+    height: 40px;
+    font-weight: 900;
+    font-size: 25px;
+  }
+}
+@media screen and (min-height: 1100px) {
+  .container {
+    gap: 20px;
+  }
+}
+
+@media screen and (max-height: 1000px) {
+  .container {
+    gap: 20px;
+  }
+}
+@media screen and (max-height: 900px) {
+  .container {
+    padding-top: 10px;
+    gap: 10px;
+    .title {
+      display: none;
+    }
+  }
+}

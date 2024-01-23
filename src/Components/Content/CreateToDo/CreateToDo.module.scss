@@ -1,0 +1,63 @@
+@import '../../../Colors';
+.container {
+  transition: 0.5s ease;
+  background-color: $WHITE;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 20px;
+  width: 80%;
+  min-height: 50px;
+  border-radius: 50px;
+  box-shadow: 0px 2px 4px 0px rgba(105, 105, 105, 0.25);
+  label {
+    cursor: pointer;
+  }
+}
+.ToDoInput {
+  background-color: $WHITE;
+  transition: 0.5s ease;
+  border: none;
+
+  outline: $Accent-Bule;
+  width: 50%;
+  height: 35px;
+  padding: 0 10px;
+  &:focus {
+    &::placeholder {
+      color: $Accent-Bule;
+    }
+  }
+}
+.buttons {
+  position: relative;
+  margin-left: auto;
+
+  display: flex;
+  gap: 1rem;
+  justify-self: flex-end;
+}
+.darkmode {
+  background-color: $DARK;
+  input {
+    color: $WHITE;
+    background-color: $DARK;
+  }
+
+  color: $WHITE;
+
+  svg path {
+    fill: transparent;
+    stroke: $WHITE;
+  }
+}
+@media screen and (max-width: 1350px) {
+  .container {
+    width: 100%;
+    label {
+      p {
+        display: none;
+      }
+    }
+  }
+}
