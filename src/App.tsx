@@ -2,17 +2,16 @@ import React from 'react';
 import './App.css';
 import Content from './Components/Content/Content';
 import Header from './Components/Header/Header';
-import LightVideo from './videos/Video1BG.mp4';
-import DarkVideo from './videos/vecteezy_gradiente-de-cor-movendo-o-fundo-na-tela_7704135.mp4';
+
 import { useAppDispatch, useAppSelector } from './hooks';
 import { initDatabase, Todo } from './DataBase';
 import { UpdateTodos } from './Store/TodosSlice';
 import HelloWindow from './Components/Content/HelloWindow/HelloWindow';
 import NotPhone from './Components/NotPhone/NotPhone';
+import VideoComponent from './Components/VideoComponent/VideoComponent';
 
 function App() {
   const dispatch = useAppDispatch();
-  const theme = useAppSelector((state) => state.theme.theme);
 
   React.useEffect(() => {
     const fetchDataFromIndexedDB = async () => {
@@ -41,20 +40,7 @@ function App() {
   }, [dispatch]);
   return (
     <div className="App">
-      <video
-        src={DarkVideo}
-        autoPlay
-        muted
-        loop
-        className={theme ? 'DarkVideo ' : 'DarkVideo Transperent '}
-      />
-      <video
-        src={LightVideo}
-        autoPlay
-        muted
-        loop
-        className={!theme ? 'LightVideo ' : 'LightVideo Transperent '}
-      />
+      <VideoComponent />
       <div className="blur"></div>
       {localStorage.getItem('hello') === null && <HelloWindow />}
       <NotPhone />

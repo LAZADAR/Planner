@@ -56,9 +56,11 @@ const DayWidget = () => {
   return (
     <div className={styles.container}>
       <div className={styles.title}>Upcoming tasks</div>
-      {widgetDays.map((day) => (
-        <WidgetObject key={day.timestamp} widget={day} />
-      ))}
+      <div className={styles.content}>
+        {widgetDays.map((day) => (
+          <WidgetObject key={day.timestamp} widget={day} />
+        ))}
+      </div>
     </div>
   );
 };
