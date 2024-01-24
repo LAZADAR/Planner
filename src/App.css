@@ -93,6 +93,7 @@ video {
   transition: 0.7s ease;
 }
 .DarkVideo {
+  pointer-events: none;
   z-index: -10;
   position: fixed;
   object-fit: cover;
@@ -105,6 +106,7 @@ video {
   opacity: 0;
 }
 .LightVideo {
+  pointer-events: none;
   z-index: -9;
   position: fixed;
   object-fit: cover;
