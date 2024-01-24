@@ -8,9 +8,7 @@ const NotPhone = () => {
       <h3>
         😔Unfortunately, the planner is not available for phones at the moment,
         but you can access it from a tablet or computer. This issue will be
-        resolved as soon as possible.Unfortunately, the planner is not available
-        for phones at the moment, but you can access it from a tablet or
-        computer. This issue will be resolved as soon as possible.
+        resolved as soon as possible.
       </h3>
     </div>
   );
