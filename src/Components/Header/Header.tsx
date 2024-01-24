@@ -30,8 +30,6 @@ const Header: React.FC = () => {
       </div>
       <div className={styles.rightside}>
         <Timer />
-        <p style={{ fontWeight: '800' }}>Hello</p>
-        <p className={styles.time}>Dylan Grace</p>
       </div>
     </div>
   );
