@@ -1,0 +1,25 @@
+@import '../../Colors';
+.NOT {
+  display: none;
+  backdrop-filter: blur(20px);
+  min-width: 100vw;
+  min-height: 100vh;
+  position: absolute;
+  top: 0px;
+  z-index: 100;
+}
+
+@media screen and (max-width: 720px) {
+  .NOT {
+    color: $WHITE;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    justify-content: center;
+    gap: 20px;
+    h3 {
+      width: 300px;
+    }
+  }
+}

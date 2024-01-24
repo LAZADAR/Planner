@@ -8,6 +8,7 @@ import { useAppDispatch, useAppSelector } from './hooks';
 import { initDatabase, Todo } from './DataBase';
 import { UpdateTodos } from './Store/TodosSlice';
 import HelloWindow from './Components/Content/HelloWindow/HelloWindow';
+import NotPhone from './Components/NotPhone/NotPhone';
 
 function App() {
   const dispatch = useAppDispatch();
@@ -56,6 +57,7 @@ function App() {
       />
       <div className="blur"></div>
       {localStorage.getItem('hello') === null && <HelloWindow />}
+      <NotPhone />
       <Header />
       <Content />
     </div>
